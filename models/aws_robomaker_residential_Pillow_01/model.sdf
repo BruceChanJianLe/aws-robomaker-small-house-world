@@ -2,9 +2,6 @@
 <sdf version="1.6">
   <model name="aws_robomaker_residential_Pillow_01">
     <link name="link">
-      <inertial>
-        <mass>1</mass>
-      </inertial>
       <collision name="collision">
         <geometry>
           <mesh>
@@ -22,5 +19,6 @@
       <meta> <layer> 1 </layer></meta>
 </visual>
     </link>
+    <static>1</static>
   </model>
 </sdf>

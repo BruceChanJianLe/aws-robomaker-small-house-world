@@ -3,18 +3,6 @@
   <model name="aws_robomaker_residential_Trash_01">
     <link name="link">
 
-      <inertial>
-    
-        <mass>0.1</mass>
-        <inertia>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyz>0</iyz>
-            <ixx>0.05288</ixx>
-            <iyy>0.05288</iyy>
-            <izz>0.09132</izz>
-          </inertia>
-      </inertial>
 
       <collision name="collision">
         <geometry>
@@ -37,5 +25,6 @@
 </visual>
     </link>
     <!-- <pose frame=''>0.0 0 -0.3 0 -0 0</pose> -->
+    <static>1</static>
   </model>
 </sdf>

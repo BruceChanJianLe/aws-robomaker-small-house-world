@@ -3,18 +3,6 @@
   <model name="aws_robomaker_residential_ChairD_01">
     <link name="link">
 
-      <inertial>
-        <!-- <mass>8.5</mass> -->
-        <mass>4.5</mass>
-          <inertia>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyz>0</iyz>
-            <ixx>0.217</ixx>
-            <iyy>0.217</iyy>
-            <izz>0.067</izz>
-          </inertia>
-      </inertial>
       
       <collision name="collision">
 
@@ -35,5 +23,6 @@
       <meta> <layer> 1 </layer></meta>
 </visual>
     </link>
+    <static>1</static>
   </model>
 </sdf>

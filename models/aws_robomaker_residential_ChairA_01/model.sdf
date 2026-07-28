@@ -2,17 +2,6 @@
 <sdf version="1.6">
   <model name="aws_robomaker_residential_ChairA_01">
     <link name="link">
-      <inertial>
-          <mass>7.5</mass>
-          <inertia>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyz>0</iyz>
-            <ixx>0.217</ixx>
-            <iyy>0.217</iyy>
-            <izz>0.067</izz>
-          </inertia>
-      </inertial>
 
       <collision name="collision">
         <geometry>
@@ -31,5 +20,6 @@
       <meta> <layer> 1 </layer></meta>
 </visual>
     </link>
+    <static>1</static>
   </model>
 </sdf>

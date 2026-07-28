@@ -2,17 +2,6 @@
 <sdf version="1.6">
   <model name="aws_robomaker_residential_SecurityCamera_01">
     <link name="link">
-      <inertial>
-        <mass>1</mass>
-        <inertia>
-          <ixx>18.2222</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>18.2222</iyy>
-          <iyz>0</iyz>
-          <izz>0.0018767</izz>
-        </inertia>
-      </inertial>
       <collision name="collision">
         <geometry>
           <mesh>
@@ -32,5 +21,6 @@
         </meta>
       </visual>
     </link>
+    <static>1</static>
   </model>
 </sdf>
