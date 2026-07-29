@@ -1,24 +1,24 @@
 import os
-import sys
 
-import launch
-import launch_ros.actions
+from launch import LaunchDescription
+from launch.actions import IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
-    ld = launch.LaunchDescription([
-        launch.actions.IncludeLaunchDescription(
-            launch.launch_description_sources.PythonLaunchDescriptionSource(
-                [get_package_share_directory(
-                    'aws_robomaker_small_house_world'), '/launch/small_house.launch.py']
+    # View the small house in the modern gz GUI (server + client).
+    # Requires a working display (the conda gz build renders via GLX/OGRE2).
+    package_dir = get_package_share_directory('aws_robomaker_small_house_world')
+
+    return LaunchDescription([
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(
+                os.path.join(package_dir, 'launch', 'small_house.launch.py')
             ),
-            launch_arguments={
-                'gui': 'true'
-            }.items()
+            launch_arguments={'gui': 'true'}.items(),
         )
     ])
-    return ld
 
 
 if __name__ == '__main__':
